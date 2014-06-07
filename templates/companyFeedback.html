@@ -1,0 +1,44 @@
+{% extends 'home.html'%}
+
+{% block content %}
+    {% if company %}
+            <table>
+                    <tr>
+                        <td>
+                            <img src="{{ company.logo.thumb_url }}"/>
+                        </td>
+                        <td>
+                            <h1> {{ company.companyName }}</h1>
+                            <h6> {{ company.tagLine }}</h6>
+                        </td>
+                    </tr>
+            </table>
+    {% endif %}
+
+    {% if feedback %}
+        {%  for i in feedback %}
+            <div class="companyDescription">
+                <table>
+                    <tr>
+                        <td>{{ i.fname }}</td>
+                        <td>{{ i.lname }}</td>
+                        <td>{{ i.phoneNumber }}</td>
+                    </tr>
+                </table>
+                <p> {{ i.comment }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p> No feedback given yet </p>
+    {% endif %}
+
+    {% if addFeedbackForm %}
+         <form id= "giveCustomerFeedback" action = {% url 'customer_give_feedback' company.pk %} method = 'POST'>
+            {% csrf_token %}
+            {{addFeedbackForm.as_p}}
+            <input id="submitCustomerFeedback" type="submit" value="add" />
+        </form>
+    {% endif %}
+
+{% endblock %}
+

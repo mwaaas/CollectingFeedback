@@ -1,0 +1,13 @@
+{% extends 'company.html' %}
+
+{% block descripton %}{% endblock %}
+
+{% block addCompany %} {% endblock %}
+
+{% block content %}
+     <form id= "addCompany" enctype="multipart/form-data"  action = {% url 'add_company' %} method = 'POST'>
+            {% csrf_token %}
+            {{add_company_form.as_p}}
+            <input id="submitaddCompany" type="submit" value="add" />
+     </form>
+{% endblock %}

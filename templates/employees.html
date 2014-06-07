@@ -1,0 +1,32 @@
+{% extends "company.html" %}
+
+{% block descripton %}
+{% endblock %}
+
+{% block content %}
+    <button onclick="window.location.href='{% url 'add_employee' %}'">
+        add employee
+     </button>
+
+      {% if all_employees  %}
+          {% for i in all_employees %}
+               <div>
+                    <table>
+                        <tr>
+                            <td width="30%"> {{ i.fname }}</td>
+                            <td width="30%"> {{ i.lname }}</td>
+                            <td width="20%"> {{ i.password }}</td>
+                            <td width="10%">  <a href="{% url 'edit_employee' i.pk %}"> edit employee</a> </td>
+                            <td width="10%">  <a href="{% url 'delete_employee' i.pk %}"> delete employee</a></td>
+                        </tr>
+                     </table>
+                </div>
+          {% endfor %}
+      {% else %}
+          <section>
+                <p> You have not added any employee yet
+                </p>
+          </section>
+      {% endif %}
+
+{% endblock %}

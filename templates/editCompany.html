@@ -1,0 +1,9 @@
+{% extends 'company.html' %}
+
+{% block content %}
+    <form id= "editCompany" action = {% url 'edit_company' companyId %} method = 'POST'>
+            {% csrf_token %}
+            {{edit_company_form.as_p}}
+            <input id="submitEditCompany" type="submit" value="edit" />
+    </form>
+{% endblock %}

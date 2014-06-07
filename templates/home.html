@@ -1,0 +1,45 @@
+{% extends 'hom.html' %}
+
+
+{% block asideOneOuter %} {% endblock %}
+
+{% block asideTwoOuter %} {% endblock %}
+
+{% block content %}
+
+       <h3>{% block descripton %}
+           choose company to give feedback
+           {% endblock %}
+           </h3>
+       {% block addCompany %}
+       {% endblock %}
+
+      {% if companies  %}
+          {% for i in companies %}
+            <div class = "companyDescription" style="border-style: solid" onclick="window.location.href={% block onclickCompany %}'{% url 'customer_give_feedback' i.pk %}'{% endblock %}" >
+
+                <table>
+                    <tr>
+                        <td>
+                            <img src="{{ i.logo.thumb_url }}"/>
+                        </td>
+                        <td>
+                            <h1> {{ i.companyName }}</h1>
+                            <h6> {{ i.tagLine }}</h6>
+                        </td>
+                    </tr>
+                </table>
+                <p> {{ i.description }}</p>
+                {% block editCompany %}{% endblock %}
+                {% block deleteCompany %}{% endblock %}
+            </div>
+          {% endfor %}
+      {% else %}
+          <section>
+                <p> No companies to give feedback to contact the admin
+                    to add the companies
+                </p>
+          </section>
+      {% endif %}
+
+{% endblock %}

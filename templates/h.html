@@ -1,0 +1,80 @@
+<!doctype html>
+
+
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title> Customer Feedback </title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+{% load staticfiles %}
+<link href="file:///C|/Users/mwas/PycharmProjects/cFeedback/cFeedback/static/mwas.css" rel="stylesheet" type="text/css">
+<link href="{% static 'mwas.css' %}" rel = "stylesheet" type ="text/css">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--></head>
+
+<body>
+
+<div class="container">
+  <header>
+  <table>
+  	<tr>
+    	<td>
+            <a href="#"><img src= "{% static 'IMG_20130921_153325_03.thumb.jpg' %}"
+                              alt="Insert Logo Here" width="96" height="128"
+                              id="Insert_logo" style="background-color: #C6D580; display:block;" /></a>
+        </td>
+        
+        <td> <h1> Customer's Feedbacks </h1> </td>
+     </tr>
+   </table>
+      <div>
+          <a href="{% url 'admin_login' %} ">admin</a>
+          <a href="{%  url 'employee_login' %}"> employee</a>
+      </div>
+  </header>
+
+  <article class="content">
+    <h3>choose company to give feedback</h3>
+
+      {% if companies  %}
+          {% for i in companies %}
+            <div class = "companyDescription">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="{{ i.logo.thumb_url }}"/>
+                        </td>
+                        <td>
+                            <h1> {{ i.companyName }}</h1>
+                            <h6> {{ i.tagLine }}</h6>
+                        </td>
+                    </tr>
+                </table>
+                <p> {{ i.description }}</p>
+            </div>
+          {% endfor %}
+      {% else %}
+          <section>
+                <p> No companies to give feedback to contact the admin
+                    to add the companies
+                </p>
+          </section>
+      {% endif %}
+  <!-- end .content --></article>
+  <footer>
+
+    <address>
+      <ul>
+          <ul>0702729654</ul>
+          <ul> francismwangi152@gmail.com</ul>
+
+      </ul>
+    </address>
+  </footer>
+  <!-- end .container --></div>
+</body>
+</html>

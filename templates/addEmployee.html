@@ -1,0 +1,9 @@
+{% extends 'employees.html' %}
+
+{% block content %}
+    <form id= "addEmployeeForm" action = {% url 'add_employee' %} method = 'POST'>
+            {% csrf_token %}
+            {{add_employee_form.as_p}}
+            <input id="submitAddEmployeeForm" type="submit" value="add" />
+    </form>
+{% endblock %}

@@ -1,0 +1,71 @@
+
+{% extends "home.html" %}
+
+{% block ul %}
+    <li> <a href="{% url 'home' %}"> Home </a> </li>
+    <li> <a href="{%  url 'view_company' %}"> Manage Company</a></li>
+    <li> <a href="{% url 'view_employee' %}"> Manage Employee</a></li>
+    <li> <a href=" {%  url 'admin_logout' %}"> Admin Logout</a></li>
+    <li> <a href="{%  url 'change_admin_password' %}"> Change Admin Password</a> </li>
+{% endblock %}
+
+{% block descripton %}
+    <p> Click the company below to view the feedbacks</p>
+{% endblock %}
+
+
+
+{% block content %}
+
+     <button onclick="window.location.href='{% url 'add_company' %}'">
+        Add company
+     </button>
+
+      {% if companies  %}
+          {% for i in companies %}
+            <div class = "companyDescription" style="border-style: solid"  >
+
+                <table>
+                    <tr>
+                        <td>
+                            <img src="{{ i.logo.thumb_url }}"/>
+                        </td>
+                        <td>
+                            <h1> {{ i.companyName }}</h1>
+                            <h6> {{ i.tagLine }}</h6>
+                        </td>
+                    </tr>
+                </table>
+                <p> {{ i.description }}</p>
+                {% block editCompany %}
+                    <button onclick="window.location.href='{% url 'view_company_feedback' i.pk %}'" >
+                    view feedback
+                    </button>
+
+                    <button onclick="window.location.href='{% url 'assign_company_employee' i.pk %}'">
+                    assign employee
+                    </button>
+                    <button onclick="window.location.href='{% url 'edit_company' i.pk %}'" >
+                    edit
+                    </button>
+                {% endblock %}
+                {% block deleteCompany %}
+                    <button onclick="window.location.href='{% url 'delete_company' i.pk %}'" >
+                    delete
+                    </button>
+
+                {% endblock %}
+            </div>
+          {% endfor %}
+      {% else %}
+          <section>
+                <p> No companies to give feedback to contact the admin
+                    to add the companies
+                </p>
+          </section>
+      {% endif %}
+
+{% endblock %}
+
+
+

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title> Customer Feedback </title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+{% load staticfiles %}
+
+<link href="{% static 'mwas.css' %}" rel = "stylesheet" type ="text/css">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--></head>
+
+<body>
+
+<div class="container">
+  <header>
+      {% block header %}
+          <table>
+  	        <tr>
+    	        <td>
+                        <a href="#"><img src= "{% static 'IMG_20130921_153325_03.thumb.jpg' %}"
+                              alt="Insert Logo Here" width="96" height="128"
+                              id="Insert_logo" style="background-color: #C6D580; display:block;" />
+                        </a>
+                </td>
+
+                <td> <h1> Customer's Feedbacks </h1> </td>
+
+            </tr>
+          </table>
+      {% endblock %}
+  </header>
+
+  {% block sidebar1Outer %}
+        <div class="sidebar1">
+            {% block sidebar1 %}
+                <nav>
+                    {% block nav %}
+                        <ul>
+                            {% block ul %}
+                                 <li><a href="{% url 'home' %}" > Home</a></li>
+                                 <li><a href="{% url 'admin_login' %}">Admin login</a></li>
+                                 <li><a href="{% url 'employee_login' %}">Employee login</a></li>
+                            {% endblock %}
+                        </ul>
+                    {% endblock %}
+                </nav>
+
+                {% block asideOneOuter %}
+                    <aside>
+                        {% block asideOne %} {% endblock %}
+                    </aside>
+                {% endblock %}
+            {% endblock %}
+        </div>
+  {% endblock %}
+
+
+  <article class="content">
+     {% block content %}
+
+      {% endblock %}
+   </article>
+
+  {% block asideTwoOuter %}
+    <aside>
+      {% block asideTwo %} {% endblock %}
+       <p>  aside is displayed here</p>
+    </aside>
+  {% endblock %}
+
+  <footer>
+      {% block footer %} {% endblock %}
+    <address>
+      <ul>
+          <li>Design : Francis Mwangi</li>
+          <li> Tel NO: 0702729654</li>
+          <li> Email: francismwangi152@gmail.com</li>
+      </ul>
+    </address>
+  </footer>
+  <!-- end .container --></div>
+</body>
+</html>

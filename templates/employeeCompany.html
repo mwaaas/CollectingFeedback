@@ -1,0 +1,45 @@
+{% extends 'home.html' %}
+
+{% block ul %}
+    <li> <a href="{% url 'home' %}"> Home </a> </li>
+    <li> <a href="{% url 'employee_logout' %}"> logout </a></li>
+{% endblock %}
+
+{% block content %}
+
+       <h3>{% block descripton %}
+           choose company to give feedback
+           {% endblock %}
+           </h3>
+       {% block addCompany %}
+       {% endblock %}
+
+      {% if companies  %}
+          {% for i in companies %}
+            <div class = "companyDescription" style="border-style: solid" onclick="window.location.href={% block onclickCompany %}'{% url 'company_employee_feedback' i.companyName.pk  employeeId %}'{% endblock %}" >
+
+                <table>
+                    <tr>
+                        <td>
+                            <img src="{{ i.companyName.logo.thumb_url }}"/>
+                        </td>
+                        <td>
+                            <h1> {{ i.companyName.companyName }}</h1>
+                            <h6> {{ i.companyName.tagLine }}</h6>
+                        </td>
+                    </tr>
+                </table>
+                <p> {{ i.companyName.description }}</p>
+                {% block editCompany %}{% endblock %}
+                {% block deleteCompany %}{% endblock %}
+            </div>
+          {% endfor %}
+      {% else %}
+          <section>
+                <p> No companies to give feedback to contact the admin
+                    to add the companies
+                </p>
+          </section>
+      {% endif %}
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "hom.html" %}
+
+{% block asideOneOuter %} {% endblock %}
+
+{% block asideTwoOuter %} {% endblock %}
+
+{% block ul %}
+    <li> <a href="{% url 'home' %}"> Home </a> </li>
+    <li> <a href="{%  url 'view_company' %}"> Manage Company</a></li>
+    <li> <a href="{% url 'view_employee' %}"> Manage Employee</a></li>
+    <li> <a href=" {%  url 'admin_logout' %}"> Admin Logout</a></li>
+    <li> <a href="{%  url 'change_admin_password' %}"> Change Admin Password</a> </li>
+{% endblock %}
+
+
+{% block content %}
+    {{ block.super }}
+
+{% endblock %}
+
+</body>
+</html>
