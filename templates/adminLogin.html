@@ -2,7 +2,9 @@
 
 {% extends "home.html" %}
 
-
+{% if message %}
+    <p> {{ message }}</p>
+{% endif %}
 {% block content %}
     <form id= "adminLoginForm" action = {% url 'admin_login' %} method = 'POST'>
         {% csrf_token %}

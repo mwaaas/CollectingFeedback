@@ -16,6 +16,8 @@ def view(request):
 
 
 def add(request):
+    if not request.session.get('admin',False):
+        return HttpResponseRedirect(reverse('admin_login'))
     add_company_form = Form.AddCompanyForm()
     if request.method == 'POST':
         add_company_form = Form.AddCompanyForm(request.POST, request.FILES)
@@ -27,6 +29,8 @@ def add(request):
                               )
 
 def edit(request, pk):
+    if not request.session.get('admin',False):
+        return HttpResponseRedirect(reverse('admin_login'))
     company = models.Company.objects.get(pk=pk)
     edit_company_form = Form.AddCompanyForm(instance=company)
     if request.method == 'POST':
@@ -40,6 +44,8 @@ def edit(request, pk):
                               )
 
 def assign(request, pk):
+    if not request.session.get('admin',False):
+        return HttpResponseRedirect(reverse('admin_login'))
     companyName = models.Company.objects.get(pk=pk)
 
     assign_form = Form.AssignEmployee()
@@ -64,6 +70,8 @@ def assign(request, pk):
                               )
 
 def delete(request, pk):
+    if not request.session.get('admin',False):
+        return HttpResponseRedirect(reverse('admin_login'))
     models.Company.objects.get(pk=pk).delete()
     return HttpResponseRedirect(reverse('view_company'))
 

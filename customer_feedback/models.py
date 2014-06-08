@@ -1,3 +1,4 @@
+from django.contrib import admin
 from django.db import models
 
 # Create your models here.
@@ -54,4 +55,11 @@ class Admin(models.Model):
     admin_name = models.CharField(verbose_name="admin name", max_length=255)
     password = models.CharField(verbose_name="Password", max_length=255)
 
+
+
+
+admin.site.register(Company)
+admin.site.register(Feedback)
+admin.site.register(Employee)
+admin.site.register(Assigned)
 

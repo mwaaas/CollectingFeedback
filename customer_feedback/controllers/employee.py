@@ -7,6 +7,8 @@ from customer_feedback import models, Form
 __author__ = 'mwas'
 
 def view(request):
+    if not request.session.get('admin',False):
+        return HttpResponseRedirect(reverse('admin_login'))
     all_employees = models.Employee.objects.all()
     return render_to_response('employees.html',
                               {'all_employees':all_employees},
@@ -14,6 +16,8 @@ def view(request):
                               )
 
 def add(request):
+    if not request.session.get('admin',False):
+        return HttpResponseRedirect(reverse('admin_login'))
     add_employee_form = Form.AddEmployeeForm()
     if request.method == 'POST':
         add_employee_form = Form.AddEmployeeForm(request.POST)
@@ -26,10 +30,14 @@ def add(request):
                               )
 
 def delete(request, pk):
+    if not request.session.get('admin',False):
+        return HttpResponseRedirect(reverse('admin_login'))
     models.Employee.objects.get(pk=pk).delete()
     return HttpResponseRedirect(reverse('view_employee'))
 
 def edit(request, pk):
+    if not request.session.get('admin',False):
+        return HttpResponseRedirect(reverse('admin_login'))
     edit_employee_form = Form.AddEmployeeForm()
     employee = models.Employee.objects.get(pk=pk)
     if request.method ==  'GET':
@@ -50,28 +58,32 @@ def login(request):
     if request.method == 'POST':
         employeeLoginForm = Form.EmployeeLoginForm(request.POST)
         if employeeLoginForm.is_valid():
+
             employee = models.Employee.objects.get(fname=request.POST['fname'],
                                                      lname=request.POST['lname'],
                                                      password=request.POST['password'])
-
+            request.session['employee'] = employee.pk
             return HttpResponseRedirect(reverse('employeeAssignedCompany' , kwargs={'employeeId':employee.pk}))
     return render_to_response("employeeLogin.html",
                               {'employeeLoginForm':employeeLoginForm},
                        context_instance=RequestContext(request),
                        )
 def logout(request):
+    request.session.flush()
     return HttpResponseRedirect(reverse('home'))
 
 def assigned(request, employeeId):
-    companyAssigned = models.Assigned.objects.filter(employee_id=employeeId)
-
-    return render_to_response("employeeCompany.html",
+    if request.session.get('employee', False):
+        companyAssigned = models.Assigned.objects.filter(employee_id=employeeId)
+        return render_to_response("employeeCompany.html",
                               {'companies':companyAssigned, 'employeeId':employeeId},
                               context_instance=RequestContext(request),
                               )
+    return HttpResponseRedirect(reverse('employee_login'))
 
 
 def feedback(request,companyId,employeeId):
+
     feedback = models.Feedback.objects.filter(company_id=companyId)
     company = models.Company.objects.get(pk=companyId)
     addFeedbackForm = Form.AddFeedbackForm()

@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a52323b-53b3-42e3-a48b-c1a0cd77bd3c" name="Default" comment="" />
+    <list default="true" id="2a52323b-53b3-42e3-a48b-c1a0cd77bd3c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customer_feedback/controllers/admin.py" afterPath="$PROJECT_DIR$/customer_feedback/controllers/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/adminLogin.html" afterPath="$PROJECT_DIR$/templates/adminLogin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customer_feedback/controllers/company.py" afterPath="$PROJECT_DIR$/customer_feedback/controllers/company.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customer_feedback/controllers/employee.py" afterPath="$PROJECT_DIR$/customer_feedback/controllers/employee.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customer_feedback/models.py" afterPath="$PROJECT_DIR$/customer_feedback/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CollectingFeedback/settings.py" afterPath="$PROJECT_DIR$/CollectingFeedback/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CollectingFeedback/urls.py" afterPath="$PROJECT_DIR$/CollectingFeedback/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="CollectingFeedback.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,46 +44,30 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CollectingFeedback/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="9" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="2856">
+            <state line="16" column="23" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0" vertical-offset="1938" max-vertical-offset="2856">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CollectingFeedback/urls.py">
+      <file leaf-file-name="company.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/customer_feedback/controllers/company.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="42" selection-start="237" selection-end="237" vertical-scroll-proportion="-0.22074468" vertical-offset="151" max-vertical-offset="527">
+            <state line="77" column="34" selection-start="3232" selection-end="3232" vertical-scroll-proportion="-8.76" vertical-offset="1090" max-vertical-offset="1530">
               <folding>
-                <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/customer_feedback/urls.py">
+      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/customer_feedback/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="23" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/customer_feedback/controllers/home.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="h.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/h.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="6" selection-start="24" selection-end="24" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="1462">
-              <folding />
+            <state line="54" column="76" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.52473116" vertical-offset="674" max-vertical-offset="1207">
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,11 +79,25 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/CollectingFeedback/settings.py" />
         <option value="$PROJECT_DIR$/CollectingFeedback/urls.py" />
+        <option value="$PROJECT_DIR$/CollectingFeedback/settings.py" />
+        <option value="dbtable:/40d38478/f3c22a55-0115-4f0a-be6e-0e971f1dd299/collectinfeedback..django_session" />
+        <option value="$PROJECT_DIR$/templates/adminLogin.html" />
+        <option value="$PROJECT_DIR$/customer_feedback/controllers/admin.py" />
+        <option value="$PROJECT_DIR$/customer_feedback/controllers/company.py" />
+        <option value="$PROJECT_DIR$/customer_feedback/controllers/employee.py" />
+        <option value="$PROJECT_DIR$/customer_feedback/models.py" />
       </list>
     </option>
   </component>
@@ -96,7 +107,7 @@
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -122,7 +133,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -138,6 +148,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CollectingFeedback" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CollectingFeedback" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CollectingFeedback" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -211,12 +235,20 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Database.TableEditor.Splitter" value="0.3554817" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$USER_HOME$/java libraries/mysql connector/mysql-connector-java-5.1.20-bin.jar" />
     <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -310,7 +342,27 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CollectingFeedback" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -336,27 +388,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CollectingFeedback" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -433,6 +465,23 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2a52323b-53b3-42e3-a48b-c1a0cd77bd3c" name="Default" comment="" />
@@ -442,32 +491,32 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.109848484" sideWeight="0.8196995" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Floobits Chat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327787" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Floobits Chat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67111856" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32888147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25378788" sideWeight="0.8196995" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1803005" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -484,6 +533,45 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/customer_feedback/controllers/home.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/h.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="6" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1462">
+          <folding>
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer_feedback/controllers/home.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
           <folding />
         </state>
@@ -491,15 +579,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/h.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="24" selection-end="24" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="1462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer_feedback/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="23" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-          <folding />
+        <state line="3" column="6" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1462">
+          <folding>
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401706904023" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -513,18 +619,85 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollectingFeedback/settings.py">
+    <entry file="file://$PROJECT_DIR$/CollectingFeedback/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="9" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="2856">
+        <state line="22" column="20" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="151" max-vertical-offset="527">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/40d38478/f3c22a55-0115-4f0a-be6e-0e971f1dd299/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="355">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CollectingFeedback/urls.py">
+    <entry file="dbDummy://dbtable:/40d38478/f3c22a55-0115-4f0a-be6e-0e971f1dd299/collectinfeedback..django_session">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CollectingFeedback/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="237" selection-end="237" vertical-scroll-proportion="-0.22074468" vertical-offset="151" max-vertical-offset="527">
+        <state line="16" column="23" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0" vertical-offset="1938" max-vertical-offset="2856">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/adminLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="18" selection-start="79" selection-end="79" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer_feedback/controllers/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="59" selection-start="1472" selection-end="1472" vertical-scroll-proportion="-5.2" vertical-offset="533" max-vertical-offset="1088">
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer_feedback/controllers/employee.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="58" selection-start="3746" selection-end="3746" vertical-scroll-proportion="1.0" vertical-offset="946" max-vertical-offset="1887">
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer_feedback/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="62" selection-start="1382" selection-end="1398" vertical-scroll-proportion="0.6393805" vertical-offset="187" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer_feedback/controllers/company.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="34" selection-start="3232" selection-end="3232" vertical-scroll-proportion="-8.76" vertical-offset="1090" max-vertical-offset="1530">
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer_feedback/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="76" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.52473116" vertical-offset="674" max-vertical-offset="1207">
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

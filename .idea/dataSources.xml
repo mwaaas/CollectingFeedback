@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4011934475">
+  <component name="DataSourceManagerImpl" format="xml" hash="921681047">
     <data-source source="LOCAL" name="Django default" uuid="f3c22a55-0115-4f0a-be6e-0e971f1dd299">
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1:3310/cfeedback</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3310/collectinfeedback</jdbc-url>
       <user-name>mwas</user-name>
       <user-password>dfc7dfcbdfc6dfc1dfc3dfcbdf9cdf9f</user-password>
       <libraries>
         <library>
-          <url>file://</url>
+          <url>file://$USER_HOME$/java libraries/mysql connector/mysql-connector-java-5.1.20-bin.jar</url>
         </library>
       </libraries>
     </data-source>
