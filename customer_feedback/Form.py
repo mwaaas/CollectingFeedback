@@ -78,19 +78,21 @@ class AssignEmployee(forms.Form):
         choice.append([i.pk, i.fname])
 
     choose_employee = forms.ChoiceField(choices=choice)
+    #choose_employee =forms.ModelChoiceField(models.Employee.objects.all())
 
 class AssingForm(forms.Form):
+    def __init__(self,companyId,*args, **kwargs):
+        self.company_id = companyId
+        super(AssingForm, self).__init__(*args, **kwargs)
 
-    #def __init__(self,*args, **kwargs):
-    #    self.company_id = kwargs.pop('companyId')
-    #    super(AssingForm, self).__init__(*args, **kwargs)
-    #
-    #    #employees that are not assigned
-    #
-    #
-    #    self.fields['choose_employee'] = forms.ModelChoiceField(models.Employee.objects.all())
+        #employees that are not assigned
 
-    choose_employee =forms.ModelChoiceField(models.Employee.objects.all())
+        self.fields['choose_employee'] = forms.ModelChoiceField(models.Employee.objects.exclude(assigned__companyName_id = self.company_id))
+
+
+    #choose_employee =forms.ModelChoiceField(models.Employee.objects.exclude(assigned__companyName_id = self.company_id))
+
+
 
 class EmployeeLoginForm(forms.Form):
     fname = forms.CharField(max_length=255,

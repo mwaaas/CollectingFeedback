@@ -48,14 +48,14 @@ def assign(request, pk):
         return HttpResponseRedirect(reverse('admin_login'))
     companyName = models.Company.objects.get(pk=pk)
 
-    assign_form = Form.AssignEmployee()
+    #assign_form = Form.AssignEmployee()
 
-    #assign_form = Form.AssingForm(companyId=pk)
+    assign_form = Form.AssingForm(companyId=pk)
     if request.method == 'POST':
-        #data = request.POST.copy()
+        data = request.POST.copy()
         #data['companyId'] = pk
-        #assign_form = Form.AssingForm(data)
-        assign_form = Form.AssignEmployee(request.POST)
+        assign_form = Form.AssingForm(companyId=pk, data=data)
+        #assign_form = Form.AssignEmployee(request.POST)
 
 
         if assign_form.is_valid():
