@@ -1,3 +1,9 @@
 # Created by .gitignore support plugin (hsz.mobi)
 
+# Compiled Python modules
+*.pyo
+*.pyc
+
+
+#pycharm files
 ..idea/
