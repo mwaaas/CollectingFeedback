@@ -4,7 +4,7 @@ CollectingFeedback
 
 ## clone
 $ git clone https://github.com/mwaas/CollectingFeedback 
-
+$ git checkout origin/develop
 ##vagrant up
 
 $ command vagrant up
