@@ -20,6 +20,9 @@ restart-supervisor :
 	ansible app_servers -i devops/inventory/$(env) -m shell -s \
 	-a "service supervisor stop && service supervisor start"
 
+runLocally:
+	@ pip install -r requirements.txt
+	@ python manage.py runserver localhost:7777
 
 help:
 	@echo ''
