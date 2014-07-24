@@ -1,0 +1,22 @@
+---
+
+- { hosts: all, sudo: yes, roles: [ common ], tags: [ common ] }
+
+- { hosts: app_servers, sudo: yes, roles: [ app_server ], tags: [ app_server ]}
+
+- hosts: db_servers
+  sudo: yes
+  roles: 
+    - role: Ansibles.postgresql
+      postgresql_version: 9.3
+      postgresql_databases: 
+        - name: "{{ DB_NAME }}"
+      postgresql_users:
+        - name: "{{ DB_USER }}"
+          pass: "{{ DB_PASSWORD }}"
+      postgresql_user_privileges:
+        - name: "{{ DB_USER }}" 
+          db: "{{ DB_NAME }}"
+          priv: ALL
+      tags: 
+        - db_server

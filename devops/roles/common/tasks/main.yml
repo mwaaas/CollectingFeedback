@@ -1,0 +1,26 @@
+---
+# tasks to be run on all nodes
+
+- name: Update package cache if last run was more than 6 hours ago
+  apt: update_cache=yes cache_valid_time={{ 60 * 60 * 6 }}
+
+- name: Install system packages
+  apt: pkg={{ item }} state=present
+  with_items:
+    - git
+    - gcc
+    - ntp
+    - screen
+    - lynx-cur
+    - wget
+    
+- name: Start ntp service
+  service: name=ntp enabled=yes state=started
+
+- name: Install SSH keys for authorized users
+  authorized_key: 
+    user: "{{ ansible_ssh_user }}"
+    key: "{{ lookup('file', 'item') }}"
+  with_fileglob: 
+    public_keys/*.pub
+  

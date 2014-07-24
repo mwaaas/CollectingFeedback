@@ -1,0 +1,80 @@
+---
+- hosts: app_servers
+  gather_facts: no
+  sudo: no
+
+  tasks:
+    - name: Send notification message via Slack
+      local_action:
+        module: slack
+        domain: wezatele.slack.com
+        token: ss29yBvz8y8uxKJwtYEpLWYL
+        msg: >
+          Deploying {{ APP_VERSION }} -> {{ APP_ENVIRONMENT }}
+          ({{ lookup('env', 'USER') }})
+      when: APP_ENVIRONMENT != "development"
+
+    - name: Check out code on app server
+      git: >
+        repo={{ APP_REPOSITORY }} 
+        dest={{ APP_DIR }} 
+        version={{ APP_VERSION }}
+        accept_hostkey=yes
+      when: APP_ENVIRONMENT != "development"
+      notify: restart app
+
+    - name: Ensure runtime directories
+      file: path={{ APP_DIR }}/{{ item }} state=directory 
+      with_items:
+        - log
+
+    - name: Install application requirements
+      # Due to a bug in Ansible local connection mode, have to specify
+      # app user as sudo user ("sudo: no" has no effect). 
+      pip: >
+        requirements={{ APP_DIR }}/requirements.txt
+        virtualenv={{ APP_VIRTUALENV }} 
+      tags:
+        - pip
+        
+    - name: Sync and migrate DB
+      django_manage: >
+        app_path={{ APP_DIR }} 
+        virtualenv={{ APP_VIRTUALENV }}
+        settings={{ APP_NAME }}.settings.{{ APP_ENVIRONMENT }}
+        command={{ item }} 
+      with_items:
+        - validate
+        - syncdb
+
+
+
+
+    - name: Configure supervisord
+      template: src=templates/supervisord.app.conf.j2 
+                dest={{ APP_DIR }}/supervisord.conf
+      notify: 
+        - restart supervisord
+
+    - name: Send notification message via Slack
+      local_action:
+        module: slack
+        domain: wezatele.slack.com
+        token: ss29yBvz8y8uxKJwtYEpLWYL
+        msg: >
+          Deployment complete ({{ lookup('env', 'USER') }})
+      when: APP_ENVIRONMENT != "development"
+
+  handlers:
+    
+    - name: restart app
+      command: supervisorctl restart {{ APP_NAME }}:*
+      tags:
+        - restart
+
+    - name: restart supervisord
+      service: name=supervisor state=restarted enabled=yes
+      sudo: yes
+      tags:
+        - restart_supervisor
+
