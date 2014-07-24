@@ -8,3 +8,6 @@
 #pycharm files
 ..idea/
 ..vagrant/
+
+#pycharm folder
+..idea\
