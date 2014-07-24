@@ -13,7 +13,7 @@ environment=PATH="{{APP_VIRTUALENV}}/bin"
 command=python manage.py run_gunicorn
     --settings=CollectingFeedback.settings
     --workers=3
-    --bind="0.0.0.0:8000"
+    --bind="0.0.0.0:8080"
     --access-logfile {{ APP_DIR }}/log/%(program_name)s_access.log
 stdout_logfile={{ APP_DIR }}/log/%(program_name)s.log
 stderr_logfile={{ APP_DIR }}/log/%(program_name)s.log
