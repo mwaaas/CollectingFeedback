@@ -2,6 +2,7 @@ env=development
 process=all
 group=all
 
+VPATH=/home/vagrant/.virtualenvs/CollectingFeedback/bin/activate
 ANSIBLE = ansible $(group) -i devops/inventory/$(env)
 ANSIBLE_PLAYBOOK = ansible-playbook -i devops/inventory/$(env)
 
@@ -23,6 +24,10 @@ restart-supervisor :
 runLocally:
 	@ pip install -r requirements.txt
 	@ python manage.py runserver localhost:7777
+
+runOnVm:
+	@. $(VPATH); python manage.py runserver 0.0.0.0:9090
+
 
 help:
 	@echo ''
