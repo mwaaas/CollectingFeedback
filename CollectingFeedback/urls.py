@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'CollectingFeedback.views.home', name='home'),
     # url(r'^CollectingFeedback/', include('CollectingFeedback.foo.urls')),
 
+    url(r'^$', include(urls)),
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
@@ -22,7 +23,6 @@ urlpatterns = patterns('',
 
     url(r'^customer_feedback/', include(urls)),
 
-    url(r'^$', include(urls)),
 
 )+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
