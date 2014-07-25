@@ -4,6 +4,7 @@ from django.conf.urls import patterns, url, include
 
 urlpatterns = patterns('customer_feedback.controllers.home',
                        url(r'^home/', 'home', name='home'),
+                       url(r'^&', 'home')
                        )
 
 urlpatterns += patterns('customer_feedback.controllers.admin',
