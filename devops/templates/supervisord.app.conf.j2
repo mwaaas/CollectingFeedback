@@ -9,15 +9,12 @@ serverurl=http://127.0.0.1:9012 ; use an http:// url to specify an inet socket
 
 
 [program:gunicorn]
-environment=PATH="{{APP_VIRTUALENV}}/bin"
-command=python manage.py run_gunicorn
-    --settings=CollectingFeedback.settings
-    --workers=3
-    --bind="0.0.0.0:9090"
-    --access-logfile {{ APP_DIR }}/log/%(program_name)s_access.log
-stdout_logfile={{ APP_DIR }}/log/%(program_name)s.log
-stderr_logfile={{ APP_DIR }}/log/%(program_name)s.log
+user={{ APP_USER }}
+directory=/{{ APP_USER }}
+environment=DJANGO_SETTINGS_MODULE="CollectingFeedback.settings"
+command=authbind /home/vagrant/.virtualenvs/CollectingFeedback/bin/gunicorn CollectingFeedback.wsgi:application --workers=4 --bind="0.0.0.0:9090" --access-logfile /vagrant/log/gunicon_access.log
+stdout_logfile=/vagrant/log/%(program_name)s.log
+stderr_logfile=/vagrant/log/%(program_name)s.log
 stopasgroup=true
 startsecs=5
-autorestart=true
 
