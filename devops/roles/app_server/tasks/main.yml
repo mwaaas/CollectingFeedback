@@ -19,6 +19,7 @@
     - postfix
     - mercurial
     - rabbitmq-server
+    - gunicorn
 
 - name: Ensure pip is up-to-date
   command: pip install --upgrade pip
@@ -29,12 +30,12 @@
     - virtualenv
     - virtualenvwrapper
 
-- name: Configure virtualenvwrapper
-  lineinfile: line="{{ item }}" dest={{ APP_HOME }}/.bashrc
-              backup=yes
-  with_items:
-    - export WORKON_HOME=$HOME/.virtualenvs
-    - source /usr/local/bin/virtualenvwrapper.sh
+#- name: Configure virtualenvwrapper
+#  lineinfile: line="{{ item }}" dest={{ APP_HOME }}/.bashrc
+#              backup=yes
+#  with_items:
+#    - export WORKON_HOME=$HOME/.virtualenvs
+#    - source /usr/local/bin/virtualenvwrapper.sh
 
 
 - name: Build dependencies for Python Postgres adapter
