@@ -3,7 +3,6 @@ from django.conf.urls import patterns, url, include
 
 
 urlpatterns = patterns('customer_feedback.controllers.home',
-                       url(r'', 'home'),
                        url(r'^home/', 'home', name='home'),
                        )
 
@@ -41,3 +40,7 @@ urlpatterns += patterns('customer_feedback.controllers.customer',
                             name='customer_give_feedback')
                         )
 
+
+urlpatterns += patterns('',
+                        url(r'','customer_feedback.controllers.home.home' )
+                        )
