@@ -3,4 +3,4 @@ APP_ENVIRONMENT: staging
 APP_VERSION: develop
 APP_PORT: 8000
 local_env:
-    DJANGO_SETTINGS_MODULE: afyajamii.settings.{{ APP_ENVIRONMENT }}
+    DJANGO_SETTINGS_MODULE: CollectingFeedback.settings

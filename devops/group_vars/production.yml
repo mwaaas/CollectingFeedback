@@ -2,4 +2,4 @@
 APP_ENVIRONMENT: production
 APP_VERSION: master
 local_env:
-    DJANGO_SETTINGS_MODULE: afyajamii.settings.{{ APP_ENVIRONMENT }}
+    DJANGO_SETTINGS_MODULE: CollectingFeedback.settings
