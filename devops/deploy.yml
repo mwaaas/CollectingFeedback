@@ -41,7 +41,7 @@
       django_manage: >
         app_path={{ APP_DIR }} 
         virtualenv={{ APP_VIRTUALENV }}
-        settings={{ CollectingFeedback }}.settings
+        settings={{SETTING_DIR}}.settings
         command={{ item }} 
       with_items:
         - validate
@@ -66,7 +66,7 @@
 #      when: APP_ENVIRONMENT != "development"
 
   handlers:
-    
+
     - name: restart app
       command: supervisorctl restart {{ APP_NAME }}:*
       tags:
