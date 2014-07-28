@@ -1,0 +1,12 @@
+customer-feedback ansible_ssh_host=41.242.2.125 ansible_ssh_user=root
+
+
+[app_servers]
+customer-feedback
+
+[db_servers]
+customer-feedback
+
+[staging:children]
+app_servers
+db_servers
