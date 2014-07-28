@@ -1,6 +1,6 @@
 ---
 APP_NAME: customer_feedback
-SETTINGDIR: CollectingFeedback
+SETTING_DIR: CollectingFeedback/
 APP_REPOSITORY: https://github.com/mwaas/CollectingFeedback
 APP_USER: "{{ ansible_ssh_user }}"
 APP_HOME: "/home/{{ APP_USER }}"
