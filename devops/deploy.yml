@@ -4,15 +4,15 @@
   sudo: no
 
   tasks:
-    - name: Send notification message via Slack
-      local_action:
-        module: slack
-        domain: wezatele.slack.com
-        token: ss29yBvz8y8uxKJwtYEpLWYL
-        msg: >
-          Deploying {{ APP_VERSION }} -> {{ APP_ENVIRONMENT }}
-          ({{ lookup('env', 'USER') }})
-      when: APP_ENVIRONMENT != "development"
+#    - name: Send notification message via Slack
+#      local_action:
+#        module: slack
+#        domain: wezatele.slack.com
+#        token: ss29yBvz8y8uxKJwtYEpLWYL
+#        msg: >
+#          Deploying {{ APP_VERSION }} -> {{ APP_ENVIRONMENT }}
+#          ({{ lookup('env', 'USER') }})
+#      when: APP_ENVIRONMENT != "development"
 
     - name: Check out code on app server
       git: >
@@ -41,7 +41,7 @@
       django_manage: >
         app_path={{ APP_DIR }} 
         virtualenv={{ APP_VIRTUALENV }}
-        settings={{ APP_NAME }}.settings
+        settings={{ CollectingFeedback }}.settings
         command={{ item }} 
       with_items:
         - validate
@@ -56,14 +56,14 @@
       notify: 
         - restart supervisord
 
-    - name: Send notification message via Slack
-      local_action:
-        module: slack
-        domain: wezatele.slack.com
-        token: ss29yBvz8y8uxKJwtYEpLWYL
-        msg: >
-          Deployment complete ({{ lookup('env', 'USER') }})
-      when: APP_ENVIRONMENT != "development"
+#    - name: Send notification message via Slack
+#      local_action:
+#        module: slack
+#        domain: wezatele.slack.com
+#        token: ss29yBvz8y8uxKJwtYEpLWYL
+#        msg: >
+#          Deployment complete ({{ lookup('env', 'USER') }})
+#      when: APP_ENVIRONMENT != "development"
 
   handlers:
     
